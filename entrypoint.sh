@@ -21,11 +21,11 @@ EOF
 
 cd "$GITHUB_WORKSPACE"
 
-echo ${INPUT_COMMIT_MESSAGE}
-echo ${INPUT_BRANCH}
-echo ${INPUT_FILE_PATTERN}
-echo ${INPUT_FILE_PATTERN:-'.'}
-echo ${INPUT_COMMIT_OPTIONS}
+echo "${INPUT_COMMIT_MESSAGE}"
+echo "${INPUT_BRANCH}"
+echo "${INPUT_FILE_PATTERN}"
+echo "${INPUT_FILE_PATTERN:-'.'}"
+echo "${INPUT_COMMIT_OPTIONS}"
 
 # This section only runs if there have been file changes
 echo "Checking for uncommitted changes in the git working tree."
