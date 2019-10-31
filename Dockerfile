@@ -11,4 +11,4 @@ LABEL "maintainer"="Stefan Zweifel <hello@stefanzweifel.io>"
 
 COPY entrypoint.sh /entrypoint.sh
 
-ENTRYPOINT ["sh", "/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
