@@ -19,6 +19,8 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
+    - ${{ inputs.commit_message }}
+    - ${{ inputs.branch }}
     - ${{ inputs.file_pattern }}
 
 branding:
