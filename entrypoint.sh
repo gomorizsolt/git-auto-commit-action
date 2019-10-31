@@ -19,8 +19,6 @@ EOF
     git config --global user.name "GitHub Actions"
 }
 
-cd "$GITHUB_WORKSPACE"
-
 echo "${INPUT_COMMIT_MESSAGE}"
 echo "${INPUT_BRANCH}"
 echo "${INPUT_FILE_PATTERN}"
