@@ -28,21 +28,21 @@ then
     echo "INPUT_BRANCH value: $INPUT_BRANCH";
 
     # Switch to branch from current Workflow run
-    git checkout $INPUT_BRANCH
+    # git checkout $INPUT_BRANCH
 
     echo "INPUT_FILE_PATTERN value: $INPUT_FILE_PATTERN";
 
-    if [ -z ${INPUT_FILE_PATTERN+x} ];
+    : 'if [ -z ${INPUT_FILE_PATTERN+x} ];
     then
         git add .
     else
         echo "INPUT_FILE_PATTERN value: $INPUT_FILE_PATTERN";
         git add $INPUT_FILE_PATTERN
-    fi
+    fi'
 
-    git commit -m "$INPUT_COMMIT_MESSAGE" --author="$GITHUB_ACTOR <$GITHUB_ACTOR@users.noreply.github.com>"
+    # git commit -m "$INPUT_COMMIT_MESSAGE" --author="$GITHUB_ACTOR <$GITHUB_ACTOR@users.noreply.github.com>"
 
-    git push --set-upstream origin "HEAD:$INPUT_BRANCH"
+    # git push --set-upstream origin "HEAD:$INPUT_BRANCH"
 else
     echo "Working tree clean. Nothing to commit."
 fi
