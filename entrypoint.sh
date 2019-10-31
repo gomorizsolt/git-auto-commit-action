@@ -21,7 +21,7 @@ EOF
 
 echo $@
 echo "INPUT_BRANCH value: $INPUT_BRANCH";
-echo "INPUT_FILE_PATTERN value: $INPUT_FILEPATTERN";
+echo "INPUT_FILE_PATTERN value: $INPUT_FILE_PATTERN";
 
 # This section only runs if there have been file changes
 echo "Checking for uncommitted changes in the git working tree."
