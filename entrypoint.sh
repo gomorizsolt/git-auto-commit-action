@@ -1,7 +1,5 @@
 #!/bin/sh
 
-cd "$GITHUB_WORKSPACE"
-
 #set -eu
 
 # Set up .netrc file with GitHub credentials
