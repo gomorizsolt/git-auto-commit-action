@@ -8,7 +8,7 @@ inputs:
   branch:
     description: Branch where changes should be pushed too
     required: true
-  file_pattern:
+  pattern:
     description: File pattern used for "git add"
     default: '.'
 runs:
@@ -17,7 +17,7 @@ runs:
   args:
     - ${{ inputs.commit_message }}
     - ${{ inputs.branch }}
-    - ${{ inputs.file_pattern }}
+    - ${{ inputs.pattern }}
 branding:
   icon: 'git-commit'
   color: orange

@@ -21,7 +21,8 @@ EOF
 
 echo ${INPUT_COMMIT_MESSAGE}
 echo ${INPUT_BRANCH}
-echo ${INPUT_FILE_PATTERN:-'.'}
+echo ${INPUT_PATTERN}
+echo ${INPUT_PATTERN:-'.'}
 
 # This section only runs if there have been file changes
 echo "Checking for uncommitted changes in the git working tree."
