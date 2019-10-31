@@ -30,6 +30,8 @@ then
     # Switch to branch from current Workflow run
     git checkout $INPUT_BRANCH
 
+    echo "INPUT_FILE_PATTERN value: $INPUT_FILE_PATTERN";
+
     if [ -z ${INPUT_FILE_PATTERN+x} ];
     then
         git add .
