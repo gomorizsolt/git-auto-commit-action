@@ -21,8 +21,6 @@ EOF
     git config --global user.name "GitHub Actions"
 }
 
-
-echo $@
 echo ${INPUT_BRANCH}
 echo ${INPUT_FILE_PATTERN}
 

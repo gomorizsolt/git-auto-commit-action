@@ -13,11 +13,13 @@ inputs:
   file_pattern:
     description: File pattern used for "git add"
     required: false
-    default: 'src'
+    default: 'github-pr-check'
 
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.file_pattern }}
 
 branding:
   icon: 'git-commit'
