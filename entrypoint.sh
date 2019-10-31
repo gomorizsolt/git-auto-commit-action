@@ -25,6 +25,8 @@ if ! git diff --quiet
 then
     git_setup
 
+    echo $@
+
     echo "INPUT_BRANCH value: $INPUT_BRANCH";
 
     # Switch to branch from current Workflow run
