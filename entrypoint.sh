@@ -19,20 +19,15 @@ EOF
 }
 
 
+echo $@
+echo "INPUT_BRANCH value: $INPUT_BRANCH";
+echo "INPUT_FILE_PATTERN value: $INPUT_FILE_PATTERN";
+
 # This section only runs if there have been file changes
 echo "Checking for uncommitted changes in the git working tree."
 if ! git diff --quiet
 then
-    git_setup
-
-    echo $@
-
-    echo "INPUT_BRANCH value: $INPUT_BRANCH";
-
-    # Switch to branch from current Workflow run
-    # git checkout $INPUT_BRANCH
-
-    echo "INPUT_FILE_PATTERN value: $INPUT_FILE_PATTERN";
+    # git_setup
 
     : 'if [ -z ${INPUT_FILE_PATTERN+x} ];
     then
