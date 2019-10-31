@@ -5,11 +5,16 @@ inputs:
   commit_message:
     description: Commit message
     required: true
+  commit_options:
+    description: Commit options
+    required: false
+    default: '--no-verify'
   branch:
     description: Branch where changes should be pushed too
     required: true
-  pattern:
+  file_pattern:
     description: File pattern used for "git add"
+    required: false
     default: '.'
 runs:
   using: 'docker'
@@ -17,7 +22,8 @@ runs:
   args:
     - ${{ inputs.commit_message }}
     - ${{ inputs.branch }}
-    - ${{ inputs.pattern }}
+    - ${{ inputs.file_pattern }}
+    - ${{ inputs.commit_options }}
 branding:
   icon: 'git-commit'
   color: orange
