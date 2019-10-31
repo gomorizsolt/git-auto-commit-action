@@ -1,6 +1,4 @@
-# FROM alpine/git:1.0.7
-
-FROM node:current-alpine
+FROM alpine/git:1.0.7
 
 LABEL "com.github.actions.name"="Auto Commit changed files"
 LABEL "com.github.actions.description"="Automatically commits files which have been changed during the workflow run and push changes back to remote repository."
